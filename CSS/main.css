@@ -1,0 +1,164 @@
+/* 
+    font-family: 'Alata', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+*/
+
+* {
+  box-sizing: border-box;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 15px;
+  margin: 0 auto;
+  text-align: center;
+  width: 100%;
+}
+
+h2,
+h3 {
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+a,
+p {
+  font-family: "Alata", sans-serif;
+}
+
+nav,
+header,
+.middle-container {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.separator {
+  flex-grow: 1;
+}
+
+/* TOP-CONTAINER SECTION */
+
+.top-container {
+  background-image: url(../images/desktop/image-hero.jpg);
+  background-size: cover;
+  color: white;
+  height: 650px;
+}
+
+nav {
+  height: 6rem;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+nav img {
+  width: initial;
+  height: initial;
+}
+
+.nav-links {
+  width: 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-links a {
+  color: white;
+}
+
+header {
+  /*margin: 0 auto;
+  max-width: 1280px;*/
+  height: calc(100% - 6rem);
+
+  display: flex;
+  align-items: center;
+}
+
+.experience-box {
+  border: 5px white solid;
+  height: 18rem;
+  min-width: 36rem;
+  padding-left: 2.5rem;
+}
+
+.experience-box h2 {
+  font-size: 4rem;
+  font-weight: 400;
+  height: 100%;
+  text-align: left;
+
+  display: flex;
+  align-items: center;
+}
+
+@media all and (max-width: 1300px) {
+  .top-container,
+  .middle-container {
+    padding: 2rem 2rem;
+  }
+}
+
+/* MIDDLE-CONTAINER SECTION */
+
+.middle-container {
+  padding: 8rem 0;
+}
+
+.vr-content {
+  text-align: left;
+  position: relative;
+}
+
+.vr-content img {
+  max-width: 60%;
+}
+
+.vr-box {
+  background-color: white;
+  border: 5rem solid white;
+  border-right: 10rem;
+  border-bottom: 0;
+  width: 50%;
+
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  right: 0;
+  top: 8.75rem;
+}
+.vr-box h2 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.creation-content {
+  margin-top: 8rem;
+}
+
+.creation-title {
+  display: flex;
+}
+
+/* FOOTER SECTION */
+
+footer {
+  background-color: black;
+}
+
+.social-media {
+  display: flex;
+}
