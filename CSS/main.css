@@ -1,8 +1,3 @@
-/* 
-    font-family: 'Alata', sans-serif;
-    font-family: 'Josefin Sans', sans-serif;
-*/
-
 * {
   box-sizing: border-box;
   list-style: none;
@@ -33,11 +28,10 @@ p {
   font-family: "Alata", sans-serif;
 }
 
-nav,
 header,
-.middle-container,
-.social-media,
-.footer-nav {
+nav,
+main > *,
+footer > * {
   max-width: 1080px;
   margin: 0 auto;
 }
@@ -46,13 +40,14 @@ header,
   flex-grow: 1;
 }
 
-/* TOP-CONTAINER SECTION */
+/* NAV-HEADER SECTION */
 
-.top-container {
+.nav-header {
   background-image: url(../images/desktop/image-hero.jpg);
   background-size: cover;
   color: white;
-  height: 650px;
+  height: 95vh;
+  min-height: 510px;
 }
 
 nav {
@@ -60,11 +55,6 @@ nav {
 
   display: flex;
   align-items: flex-end;
-}
-
-nav img {
-  width: initial;
-  height: initial;
 }
 
 .nav-links {
@@ -80,8 +70,6 @@ nav img {
 }
 
 header {
-  /*margin: 0 auto;
-  max-width: 1280px;*/
   height: calc(100% - 6rem);
 
   display: flex;
@@ -112,9 +100,11 @@ header {
   }
 }
 
-/* MIDDLE-CONTAINER SECTION */
+/*
+###### MAIN SECTION ######
+*/
 
-.middle-container {
+main {
   padding: 8rem 0;
 }
 
@@ -151,6 +141,8 @@ header {
 }
 
 .creation-title {
+  padding-bottom: 3rem;
+
   display: flex;
 }
 
@@ -176,6 +168,51 @@ header {
 }
 
 .creation-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+}
+
+.creation-box {
+  height: 450px;
+  width: 256px;
+
+  position: relative;
+}
+
+.creation-box h3 {
+  color: white;
+  font-size: 2rem;
+  text-align: left;
+
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+}
+
+.deep-earth {
+  background-image: url(../images/desktop/image-deep-earth.jpg);
+}
+.night-arcade {
+  background-image: url(../images/desktop/image-night-arcade.jpg);
+}
+.soccer-team-vr {
+  background-image: url(../images/desktop/image-soccer-team.jpg);
+}
+.the-grid {
+  background-image: url(../images/desktop/image-deep-earth.jpg);
+}
+.up-above-vr {
+  background-image: url(../images/desktop/image-from-above.jpg);
+}
+.pocket-borealis {
+  background-image: url(../images/desktop/image-pocket-borealis.jpg);
+}
+.the-curiosity {
+  background-image: url(../images/desktop/image-curiosity.jpg);
+}
+.fisheye {
+  background-image: url(../images/desktop/image-fisheye.jpg);
 }
 
 /* FOOTER SECTION */
