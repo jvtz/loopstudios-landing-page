@@ -5,30 +5,25 @@
   padding: 0;
   text-decoration: none;
 }
-
 html {
   scroll-behavior: smooth;
 }
-
 body {
   font-size: 15px;
   margin: 0 auto;
   text-align: center;
   width: 100%;
 }
-
 h1,
 h2,
 h3 {
   text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
 }
-
 a,
 p {
   font-family: "Alata", sans-serif;
 }
-
 header,
 nav,
 main > *,
@@ -36,17 +31,14 @@ footer > * {
   max-width: 1080px;
   margin: 0 auto;
 }
-
 .separator {
   flex-grow: 1;
 }
-
 /*
 
 ##### NAV-HEADER SECTION ######
 
 */
-
 .nav-header {
   background-image: url(../images/desktop/image-hero.jpg);
   background-size: cover;
@@ -55,14 +47,12 @@ footer > * {
   height: 95vh;
   min-height: 510px;
 }
-
 nav {
   height: 6rem;
 
   display: flex;
   align-items: flex-end;
 }
-
 .nav-links {
   width: 40%;
 
@@ -70,19 +60,28 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-
 .nav-links a,
 .nav-links2 a {
   color: white;
 }
+.burger {
+  cursor: pointer;
+  display: none;
+}
+.burger div {
+  background-color: white;
+  height: 0.25rem;
+  margin: 0.3rem;
+  width: 1.5rem;
 
+  transition: all 0.3s ease;
+}
 header {
   height: calc(100% - 6rem);
 
   display: flex;
   align-items: center;
 }
-
 .experience-box {
   border: 5px white solid;
   height: 18rem;
@@ -90,7 +89,6 @@ header {
   max-width: 36rem;
   width: 100%;
 }
-
 .experience-box h1 {
   font-size: 4rem;
   font-weight: 400;
@@ -100,22 +98,18 @@ header {
   display: flex;
   align-items: center;
 }
-
 /*
 
 ###### MAIN SECTION ######
 
 */
-
 main {
   padding: 8rem 0;
 }
-
 .vr-content {
   text-align: left;
   position: relative;
 }
-
 .vr-box {
   background-color: white;
   border-top: 5rem solid white;
@@ -130,25 +124,20 @@ main {
   font-size: 3rem;
   margin-bottom: 1.5rem;
 }
-
 .creation-content-desktop {
   margin-top: 8rem;
 }
-
 .creation-content-mobile {
   display: none;
 }
-
 .creation-title {
   padding-bottom: 3rem;
 
   display: flex;
 }
-
 .creation-title h2 {
   font-size: 2.5rem;
 }
-
 .see-all-button {
   background-color: #fff;
   border: 2px solid #000;
@@ -159,23 +148,20 @@ main {
 
   transition: 0.3s;
 }
-
 .see-all-button:hover {
   background-color: #000;
   color: #fff;
   cursor: pointer;
 }
-
 .creation-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 1fr 1fr;
   gap: 20px;
 }
-
 .creation-box {
   position: relative;
 }
-
 .creation-box div {
   color: white;
   font-size: 2rem;
@@ -185,17 +171,14 @@ main {
   left: 2rem;
   bottom: 2rem;
 }
-
 /*
 
 ##### FOOTER SECTION #####
 
 */
-
 footer {
   background-color: black;
 }
-
 .social-media {
   padding-top: 2rem;
   padding-bottom: 1rem;
@@ -203,7 +186,6 @@ footer {
   display: flex;
   align-items: flex-start;
 }
-
 .social-media-logo {
   width: 20%;
 
@@ -211,12 +193,10 @@ footer {
   align-items: center;
   justify-content: space-evenly;
 }
-
 .footer-nav {
   display: flex;
   padding-bottom: 1.5rem;
 }
-
 .nav-links2 {
   width: 40%;
 
@@ -224,18 +204,15 @@ footer {
   align-items: center;
   justify-content: space-between;
 }
-
 .footer-nav > * {
   color: white;
 }
-
 .attribution {
   color: white;
   font-size: 0.8rem;
   text-align: center;
   padding-bottom: 0.2rem;
 }
-
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
@@ -247,11 +224,9 @@ footer {
   footer > * {
     padding: 0 3%;
   }
-
   h3 {
     font-size: 1.5rem;
   }
-
   .nav-header {
     min-height: 95vh;
   }
@@ -261,7 +236,6 @@ footer {
   nav img {
     width: 10rem;
   }
-
   .vr-content,
   .vr-box {
     text-align: center;
@@ -281,7 +255,6 @@ footer {
     font-size: 2.5rem;
     margin-bottom: 1.5rem;
   }
-
   .creation-content-desktop {
     display: none;
   }
@@ -302,7 +275,6 @@ footer {
   .creation-box img {
     max-width: 100%;
   }
-
   .nav-links2 {
     width: 50%;
   }
@@ -318,19 +290,36 @@ footer {
   h2 {
     font-size: 2rem !important;
   }
-
-  .nav-links {
-    display: none;
+  body {
+    overflow-x: hidden;
   }
+
   nav img {
     width: 8rem;
   }
+  .nav-links {
+    background-color: rgba(0, 0, 0, 0.6);
+    height: calc(511px + 6rem);
+    width: 100%;
 
-  .separator {
-    display: none;
-    flex-grow: initial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    position: absolute;
+    right: 0px;
+    top: 6rem;
+
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
   }
-
+  .nav-active {
+    transform: translateX(0%);
+  }
+  .burger {
+    display: inline-block;
+  }
   .experience-box {
     height: 14rem;
     padding-left: 5%;
@@ -340,7 +329,6 @@ footer {
     text-align: left;
     width: 80%;
   }
-
   .social-media {
     display: grid;
     grid-template-columns: 100%;
@@ -370,4 +358,28 @@ footer {
     font-size: 1rem;
     padding-bottom: 1.5rem;
   }
+}
+/*
+##### ANIMATIONS #####
+*/
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-6px, 6px);
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotate(45deg) translate(-6px, -6px);
 }
